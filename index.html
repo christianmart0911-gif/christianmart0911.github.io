@@ -6,13 +6,20 @@
     <title>Christian Martinez</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- Typing intro -->
+    <div class="intro">
+        <h1><span id="typing"></span></h1>
+    </div>
+
+    <!-- Header -->
     <header>
-        <h1>Christian Martinez</h1>
         <p>Technology • Cybersecurity • Networking</p>
     </header>
 
+    <!-- About section -->
     <section class="about">
         <img src="me.jpg" alt="photo of Christian Martinez" class="profile-pic">
 
@@ -20,12 +27,26 @@
             <h2>About Me</h2>
 
             <p>
-                I enjoy learning about cybersecurity, networking,
-                coding, and technology. I like exploring how
-                computer systems work and building technical projects.
+                My name is Christian Martinez, and I am a passionate technology enthusiast with a strong focus on cybersecurity and networking. I enjoy learning how systems work behind the scenes and building technical projects. I am committed to staying up-to-date with the latest trends in technology and improving my skills every day. My goal is to grow into a strong cybersecurity professional and work in the tech industry.
             </p>
         </div>
     </section>
+
+    <!-- Typing animation -->
+    <script>
+        const text = "Hi, I’m Christian Martinez...";
+        let i = 0;
+
+        function typeEffect() {
+            if (i < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+
+        typeEffect();
+    </script>
 
 </body>
 </html>
